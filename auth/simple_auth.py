@@ -38,15 +38,25 @@ class SimpleAuth:
         except Exception as e:
             st.write(f"❌ Error al verificar sección secrets: {e}")
         
-        # Intentar leer las contraseñas
+        # Intentar leer las contraseñas con diferentes métodos
         try:
+            # Método 1: Acceso directo
             admin_pass = st.secrets["ADMIN_PASSWORD"]
             guest_pass = st.secrets["GUEST_PASSWORD"]
-            st.write("✅ Contraseñas leídas correctamente")
-        except KeyError as e:
-            st.error(f"⚠️ **Error de configuración**: No se encontró la variable {e} en Streamlit Secrets.")
-            st.info("Por favor, configura estas variables en Streamlit Cloud Secrets.")
-            st.stop()
+            st.write("✅ Contraseñas leídas con método directo")
+        except KeyError:
+            try:
+                # Método 2: Acceso a través de la sección secrets
+                admin_pass = st.secrets.secrets["ADMIN_PASSWORD"]
+                guest_pass = st.secrets.secrets["GUEST_PASSWORD"]
+                st.write("✅ Contraseñas leídas con método secrets.secrets")
+            except KeyError as e:
+                st.error(f"⚠️ **Error de configuración**: No se encontró la variable {e} en Streamlit Secrets.")
+                st.info("Por favor, configura estas variables en Streamlit Cloud Secrets.")
+                st.stop()
+            except Exception as e:
+                st.error(f"❌ **Error inesperado**: {e}")
+                st.stop()
         except Exception as e:
             st.error(f"❌ **Error inesperado**: {e}")
             st.stop()
