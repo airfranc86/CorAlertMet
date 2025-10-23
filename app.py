@@ -12,7 +12,7 @@ import streamlit as st
 # Importar componentes
 from components.footer import show_footer
 from components.styles import apply_corporate_styles
-from components.svg_icons_smooth import show_svg_icon
+from components.svg_icons_simple import show_svg_icon
 
 # Importar sistema de autenticación y logging
 from auth.simple_auth import SimpleAuth, show_login_form, show_logout_section, require_auth

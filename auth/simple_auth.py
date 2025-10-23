@@ -253,7 +253,7 @@ def show_login_form() -> None:
     # Header con icono SVG profesional
     col1, col2 = st.columns([1, 20])
     with col1:
-        from components.svg_icons_smooth import show_svg_icon
+        from components.svg_icons_simple import show_svg_icon
         show_svg_icon("user", width=48, height=48, animation="gentlePulse", color="#3B82F6")
     with col2:
         st.markdown("## Acceso al Sistema")
