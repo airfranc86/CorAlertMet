@@ -50,7 +50,7 @@ def show_svg_icon(icon_name, width=24, height=24, animation="smoothBlink", color
         """,
 
         "brain": f"""
-<svg width=""{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
+<svg width="{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
         
             <style>
                 @keyframes smoothBlink {{
@@ -82,7 +82,7 @@ def show_svg_icon(icon_name, width=24, height=24, animation="smoothBlink", color
         """,
 
         "cloud-sun": f"""
-<svg width=""{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
+<svg width="{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
         
             <style>
                 @keyframes smoothBlink {{
@@ -117,7 +117,7 @@ def show_svg_icon(icon_name, width=24, height=24, animation="smoothBlink", color
         """,
 
         "thermometer": f"""
-<svg width=""{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
+<svg width="{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
         
             <style>
                 @keyframes smoothBlink {{
@@ -148,7 +148,7 @@ def show_svg_icon(icon_name, width=24, height=24, animation="smoothBlink", color
         """,
 
         "droplet": f"""
-<svg width=""{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
+<svg width="{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
         
             <style>
                 @keyframes smoothBlink {{
@@ -177,7 +177,7 @@ def show_svg_icon(icon_name, width=24, height=24, animation="smoothBlink", color
         """,
 
         "wind": f"""
-<svg width=""{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
+<svg width="{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
         
             <style>
                 @keyframes smoothBlink {{
@@ -209,7 +209,7 @@ def show_svg_icon(icon_name, width=24, height=24, animation="smoothBlink", color
         """,
 
         "gauge": f"""
-<svg width=""{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
+<svg width="{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
         
             <style>
                 @keyframes smoothBlink {{
@@ -239,7 +239,7 @@ def show_svg_icon(icon_name, width=24, height=24, animation="smoothBlink", color
         """,
 
         "refresh": f"""
-<svg width=""{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
+<svg width="{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
         
             <style>
                 @keyframes smoothBlink {{
@@ -273,7 +273,7 @@ def show_svg_icon(icon_name, width=24, height=24, animation="smoothBlink", color
         """,
 
         "check-circle": f"""
-<svg width=""{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
+<svg width="{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
         
             <style>
                 @keyframes smoothBlink {{
@@ -304,7 +304,7 @@ def show_svg_icon(icon_name, width=24, height=24, animation="smoothBlink", color
         """,
 
         "info": f"""
-<svg width=""{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
+<svg width="{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
         
             <style>
                 @keyframes smoothBlink {{
@@ -335,7 +335,7 @@ def show_svg_icon(icon_name, width=24, height=24, animation="smoothBlink", color
         """,
 
         "alert-triangle": f"""
-<svg width=""{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
+<svg width="{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
         
             <style>
                 @keyframes smoothBlink {{
@@ -367,7 +367,7 @@ def show_svg_icon(icon_name, width=24, height=24, animation="smoothBlink", color
         """,
 
         "cloud-lightning": f"""
-<svg width=""{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
+<svg width="{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
         
             <style>
                 @keyframes smoothBlink {{
@@ -396,7 +396,7 @@ def show_svg_icon(icon_name, width=24, height=24, animation="smoothBlink", color
         """,
 
         "clock": f"""
-<svg width=""{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
+<svg width="{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
         
             <style>
                 @keyframes smoothBlink {{
@@ -426,7 +426,7 @@ def show_svg_icon(icon_name, width=24, height=24, animation="smoothBlink", color
         """,
 
         "search": f"""
-<svg width=""{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
+<svg width="{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
         
             <style>
                 @keyframes smoothBlink {{
@@ -456,7 +456,7 @@ def show_svg_icon(icon_name, width=24, height=24, animation="smoothBlink", color
         """,
 
         "sun": f"""
-<svg width=""{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
+<svg width="{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
         
             <style>
                 @keyframes smoothBlink {{
@@ -493,7 +493,7 @@ def show_svg_icon(icon_name, width=24, height=24, animation="smoothBlink", color
         """,
 
         "cloud": f"""
-<svg width=""{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
+<svg width="{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
         
             <style>
                 @keyframes smoothBlink {{
@@ -523,7 +523,7 @@ def show_svg_icon(icon_name, width=24, height=24, animation="smoothBlink", color
         """,
 
         "home": f"""
-<svg width=""{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
+<svg width="{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
         
             <style>
                 @keyframes smoothBlink {{
@@ -554,7 +554,7 @@ def show_svg_icon(icon_name, width=24, height=24, animation="smoothBlink", color
         """,
 
         "map": f"""
-<svg width=""{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
+<svg width="{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
         
             <style>
                 @keyframes smoothBlink {{
@@ -585,7 +585,7 @@ def show_svg_icon(icon_name, width=24, height=24, animation="smoothBlink", color
         """,
 
         "book": f"""
-<svg width=""{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
+<svg width="{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
         
             <style>
                 @keyframes smoothBlink {{
@@ -616,7 +616,7 @@ def show_svg_icon(icon_name, width=24, height=24, animation="smoothBlink", color
         """,
 
         "mail": f"""
-<svg width=""{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
+<svg width="{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
         
             <style>
                 @keyframes smoothBlink {{
@@ -647,7 +647,7 @@ def show_svg_icon(icon_name, width=24, height=24, animation="smoothBlink", color
         """,
 
         "tag": f"""
-<svg width=""{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
+<svg width="{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
         
             <style>
                 @keyframes smoothBlink {{
@@ -678,7 +678,7 @@ def show_svg_icon(icon_name, width=24, height=24, animation="smoothBlink", color
         """,
 
         "user": f"""
-<svg width=""{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
+<svg width="{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
         
             <style>
                 @keyframes smoothBlink {{
@@ -702,14 +702,14 @@ def show_svg_icon(icon_name, width=24, height=24, animation="smoothBlink", color
                     transform-origin: center;
                 }}
             </style>
-<path d=""M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="{color}" stroke-width="2" fill="none"/>
+<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="{color}" stroke-width="2" fill="none"/>
             
             <circle cx="12" cy="7" r="4" stroke="{color}" stroke-width="2" fill="none"/>
         </svg>
         """,
 
         "compass": f"""
-<svg width=""{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
+<svg width="{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
         
             <style>
                 @keyframes smoothBlink {{
@@ -740,7 +740,7 @@ def show_svg_icon(icon_name, width=24, height=24, animation="smoothBlink", color
         """,
 
         "satellite": f"""
-<svg width=""{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
+<svg width="{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
         
             <style>
                 @keyframes smoothBlink {{
@@ -770,7 +770,7 @@ def show_svg_icon(icon_name, width=24, height=24, animation="smoothBlink", color
         """,
 
         "bar-chart-3": f"""
-<svg width=""{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
+<svg width="{width}" height="{height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="smooth-icon">
         
             <style>
                 @keyframes smoothBlink {{
