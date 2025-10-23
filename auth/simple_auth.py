@@ -84,7 +84,7 @@ class SimpleAuth:
             if self._is_account_locked():
                 return {
                     "success": False,
-                    "error": "Demasiados intentos fallidos. Intenta más tarde."
+                    "error": "Demasiados intentos fallidos (máximo 10). Intenta más tarde."
                 }
 
             # Validar entrada
@@ -159,8 +159,8 @@ class SimpleAuth:
 
     def _is_account_locked(self) -> bool:
         """Verifica si la cuenta está bloqueada por intentos fallidos"""
-        max_attempts = 5
-        lockout_duration = 300  # 5 minutos
+        max_attempts = 10
+        lockout_duration = 180  # 3 minutos
 
         if st.session_state.login_attempts >= max_attempts:
             if st.session_state.last_attempt:
