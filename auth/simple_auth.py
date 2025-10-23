@@ -18,9 +18,18 @@ class SimpleAuth:
     """Sistema de autenticación simple con admin e invitado"""
 
     def __init__(self):
+        # Obtener contraseñas desde Streamlit Secrets (no variables de entorno)
+        try:
+            admin_pass = st.secrets["ADMIN_PASSWORD"]
+            guest_pass = st.secrets["GUEST_PASSWORD"]
+        except KeyError as e:
+            st.error(f"⚠️ **Error de configuración**: No se encontró la variable {e} en Streamlit Secrets.")
+            st.info("Por favor, configura estas variables en Streamlit Cloud Secrets.")
+            st.stop()
+            
         self.users = {
-            'admin': os.getenv('ADMIN_PASSWORD', ''),
-            'invitado': os.getenv('GUEST_PASSWORD', '')
+            'admin': admin_pass,
+            'invitado': guest_pass
         }
 
         # Inicializar estado de sesión
