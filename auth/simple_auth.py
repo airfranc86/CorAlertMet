@@ -18,13 +18,37 @@ class SimpleAuth:
     """Sistema de autenticación simple con admin e invitado"""
 
     def __init__(self):
-        # Obtener contraseñas desde Streamlit Secrets (no variables de entorno)
+        # Debug completo de Streamlit Secrets
+        st.write("🔍 **DEBUG COMPLETO DE STREAMLIT SECRETS:**")
+        
+        # Mostrar todas las claves disponibles
+        try:
+            st.write("📋 **Claves disponibles en st.secrets:**")
+            for key in st.secrets.keys():
+                st.write(f"- {key}")
+        except Exception as e:
+            st.write(f"❌ Error al leer claves: {e}")
+        
+        # Verificar si existe la sección secrets
+        try:
+            if hasattr(st.secrets, 'secrets'):
+                st.write("✅ Sección 'secrets' encontrada")
+            else:
+                st.write("❌ Sección 'secrets' NO encontrada")
+        except Exception as e:
+            st.write(f"❌ Error al verificar sección secrets: {e}")
+        
+        # Intentar leer las contraseñas
         try:
             admin_pass = st.secrets["ADMIN_PASSWORD"]
             guest_pass = st.secrets["GUEST_PASSWORD"]
+            st.write("✅ Contraseñas leídas correctamente")
         except KeyError as e:
             st.error(f"⚠️ **Error de configuración**: No se encontró la variable {e} en Streamlit Secrets.")
             st.info("Por favor, configura estas variables en Streamlit Cloud Secrets.")
+            st.stop()
+        except Exception as e:
+            st.error(f"❌ **Error inesperado**: {e}")
             st.stop()
             
         self.users = {
