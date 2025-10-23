@@ -5,7 +5,7 @@ Animación de parpadeo elegante y profesional
 
 import streamlit as st
 
-def show_svg_icon(icon_name, width=24, height=24, animation="smoothBlink", color="#3B82F6":
+def show_svg_icon(icon_name, width=24, height=24, animation="smoothBlink", color="#3B82F6"):
     """
     Mostrar icono SVG con blinking suave y smooth
 
@@ -805,12 +805,12 @@ def show_svg_icon(icon_name, width=24, height=24, animation="smoothBlink", color
     # Obtener el icono SVG
     if icon_name in svg_icons:
         svg_content = svg_icons[icon_name]
-        st.markdown(svg_content, unsafe_allow_html=True
+        st.markdown(svg_content, unsafe_allow_html=True)
     else:
         # Fallback para iconos no encontrados
         st.markdown(
             f'<div style="font-size: {width}px; text-align: center;">❓</div>',
-            unsafe_allow_html=True
+            unsafe_allow_html=True)
 def get_animation_types():
     """Obtener tipos de animación disponibles"""
     return ["smoothBlink", "gentlePulse", "softBounce", "smoothRotate"]
