@@ -1,0 +1,68 @@
+# ===========================================
+# CORALERTINTEL - CONFIGURACIÓN GIT
+# ===========================================
+
+# Archivos de texto
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.toml text eol=lf
+*.json text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.js text eol=lf
+
+# Archivos binarios
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.tar binary
+*.gz binary
+
+# Archivos de configuración
+*.toml text
+*.yaml text
+*.yml text
+*.ini text
+*.cfg text
+
+# Archivos de datos
+*.csv text
+*.tsv text
+*.xml text
+
+# Archivos de documentación
+*.md text
+*.rst text
+*.txt text
+
+# Archivos de Python
+*.py text diff=python
+*.pyx text diff=python
+*.pyi text diff=python
+
+# Archivos de configuración de IDE
+.vscode/* text
+.idea/* text
+*.sublime-* text
+
+# Archivos de sistema
+.DS_Store binary
+Thumbs.db binary
+desktop.ini binary
+
+# Archivos de cache (no commitear)
+*.pyc binary
+*.pyo binary
+*.pyd binary
+__pycache__/ binary
+
+# Archivos de virtual environment (no commitear)
+venv/ binary
+env/ binary
+.venv/ binary
+.env/ binary

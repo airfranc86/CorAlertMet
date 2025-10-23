@@ -1,0 +1,48 @@
+[project]
+name = "coralert-intelligence"
+version = "2.1.0"
+description = "Sistema de Alertas Meteorológicas con Machine Learning"
+authors = [
+    {name = "Francisco Aucar", email = "franciscoaucar@ajconsultingit.com"}
+]
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Atmospheric Science",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[tool.pylint.master]
+disable = "C0114,C0116,R0903,W0613"
+max-line-length = 100
+ignore-patterns = ["test_.*\\.py", "venv.*", "__pycache__.*"]
+
+[tool.pylint.messages_control]
+disable = "missing-docstring,too-few-public-methods,too-many-arguments,too-many-locals"
+
+[tool.pylint.format]
+max-line-length = 100
+indent-string = "    "
+
+[tool.pylint.design]
+max-args = 8
+max-locals = 20
+max-returns = 6
+max-branches = 15
+max-statements = 60
+
+[tool.bandit]
+exclude_dirs = ["venv_security", "venv", "__pycache__"]
+skips = ["B101", "B601"]
+
+[tool.safety]
+output = "json"
