@@ -4,7 +4,7 @@ Configuración de versión centralizada para CorAlertIntel Intelligence
 
 __version__ = "2.3.0"
 __version_info__ = (2, 3, 0)
-__author__ = "Francisco Aucar"
+__author__ = "Francisco A"
 __email__ = "franciscoaucar@ajconsultingit.com"
 __description__ = "Sistema de Alertas Meteorológicas con Machine Learning"
 
