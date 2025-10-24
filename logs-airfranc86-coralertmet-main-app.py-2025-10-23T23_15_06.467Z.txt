@@ -1,0 +1,1098 @@
+
+[     UTC     ] Logs for coralertmet.streamlit.app/
+────────────────────────────────────────────────────────────────────────────────────────
+[23:57:40] 🖥 Provisioning machine...
+[23:57:40] 🎛 Preparing system...
+[23:57:40] ⛓ Spinning up manager process...
+[23:57:41] 🚀 Starting up repository: 'coralertmet', branch: 'main', main module: 'app.py'
+[23:57:41] 🐙 Cloning repository...
+[23:57:43] 🐙 Cloning into '/mount/src/coralertmet'...
+
+[23:57:43] 🐙 Cloned repository!
+[23:57:43] 🐙 Pulling code changes from Github...
+[23:57:44] 📦 Processing dependencies...
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.13.9 environment at /home/adminuser/venv
+Resolved 127 packages in 2.13s
+Prepared 127 packages in 1m 28s
+Uninstalled 1 package in 139ms
+Installed 127 packages in 1.87s
+ + aiohappyeyeballs==2.6.1
+ + aiohttp==3.13.1
+ + aiosignal==1.4.0
+ + altair[2025-10-23 23:59:17.597464] ==5.5.0
+ + astroid==4.0.1
+ + attrs==25.4.0
+ + bandit==1.8.6
+ + blinker==1.9.0
+ + boolean-py==5.0
+ + branca==0.8.2
+ + cachecontrol==0.14.3
+ + cachetools==6.2.1
+ + certifi==2025.10.5
+ + charset-normalizer==3.4.4
+ + click==8.3.0
+ + cloudpickle==3.1.1
+ + contourpy==1.3.3
+ + cycler==0.12.1
+ + cyclonedx-python-lib==9.1.0[2025-10-23 23:59:17.597945] 
+ + darts==0.38.0
+ + defusedxml==0.7.1
+ + dill==0.4.0
+ + filelock==3.20.0
+ + folium==0.20.0
+ + fonttools==4.60.1
+ + frozenlist==1.8.0[2025-10-23 23:59:17.598199] 
+ + fsspec==2025.9.0
+ + gitdb==4.0.12
+ + gitpython==3.1.45
+ + holidays==0.83
+ + idna==3.11
+ + isort==7.0.0[2025-10-23 23:59:17.598406] 
+ + jinja2==3.1.6
+ + joblib==1.5.2
+ + jsonschema==4.25.1
+ + jsonschema-specifications==2025.9.1
+ + kiwisolver==1.4.9
+ +[2025-10-23 23:59:17.598671]  license-expression==30.4.4
+ + lightning-utilities==0.15.2
+ + llvmlite==0.45.1
+ + markdown-it-py==4.0.0
+ + markupsafe==3.0.3
+ + matplotlib==[2025-10-23 23:59:17.598890] 3.10.7
+ + mccabe==0.7.0
+ + mdurl==0.1.2
+ + mpmath==1.3.0
+ + msgpack==1.1.2
+ + multidict==6.7.0
+ [2025-10-23 23:59:17.670071] + narwhals==2.9.0
+ + networkx==3.5
+ + nfoursid==1.0.2
+ + numba==0.62.1
+ + numpy==2.3.4
+ + nvidia-cublas-cu12==12.8.4.1[2025-10-23 23:59:17.670388] 
+ + nvidia-cuda-cupti-cu12==12.8.90
+ + nvidia-cuda-nvrtc-cu12==12.8.93
+ + nvidia-cuda-runtime-cu12==12.8.90
+ + nvidia-cudnn-cu12==9.10.2.21
+ + nvidia-cufft-cu12==11.3.3.83
+ + [2025-10-23 23:59:17.670664] nvidia-cufile-cu12==1.13.1.3
+ + nvidia-curand-cu12==10.3.9.90
+ + nvidia-cusolver-cu12==11.7.3.90
+ + nvidia-cusparse-cu12==12.5.8.93
+ + nvidia-cusparselt-cu12==0.7.1
+ + nvidia-nccl-cu12==[2025-10-23 23:59:17.670897] 2.27.5
+ + nvidia-nvjitlink-cu12==12.8.93
+ + nvidia-nvshmem-cu12==3.3.20
+ + nvidia-nvtx-cu12==12.8.90
+ + packageurl-python==0.17.5
+ + packaging==[2025-10-23 23:59:17.671074] 25.0
+ + pandas==2.3.3
+ + patsy==1.0.2
+ + pillow==11.3.0
+ - pip==24.0
+ + pip==25.2
+ + pip-api==0.0.34[2025-10-23 23:59:17.671244] 
+ + pip-audit==2.9.0
+ + pip-requirements-parser==32.0.1
+ + platformdirs==4.5.0
+ + plotly==6.3.1
+ + propcache==0.4.1
+ + protobuf==6.33.0
+ + py-serializable==2.1.0
+ + pyarrow==21.0.0
+ + pydeck==0.9.1
+ + pygments==2.19.2
+ + pylint==4.0.2
+ + pyod==2.0.5
+ + pyparsing==3.2.5
+ + python-dateutil==2.9.0.post0[2025-10-23 23:59:17.671589] 
+ + python-dotenv==1.1.1
+ + pytorch-lightning==2.5.2
+ + pytz==2025.2
+ + pyyaml==6.0.3
+ + referencing==0.37.0
+ [2025-10-23 23:59:17.671839] + requests==2.32.5
+ + rich==14.2.0
+ + rpds-py==0.28.0
+ + scikit-learn==1.7.2
+ + scipy==1.16.2
+ + [2025-10-23 23:59:17.672250] setuptools==80.9.0
+ + shap==0.49.1
+ + six==1.17.0
+ + slicer==0.0.8
+ + smmap==5.0.2
+ + sortedcontainers[2025-10-23 23:59:17.672534] ==2.4.0
+ + statsmodels==0.14.5
+ + stevedore==5.5.0
+ + streamlit==1.50.0
+ + streamlit-folium==0.25.3
+ + sympy==1.14.0
+ +[2025-10-23 23:59:17.673126]  tenacity==9.1.2
+ + tensorboardx==2.6.4
+ + threadpoolctl==3.6.0
+ + toml==0.10.2
+ + tomlkit==0.13.3[2025-10-23 23:59:17.673382] 
+ + torch==2.9.0
+ + torchmetrics==1.8.2
+ + tornado==6.5.2
+ + tqdm==4.67.1
+ + triton[2025-10-23 23:59:17.673610] ==3.5.0
+ + typing-extensions==4.15.0
+ + tzdata==2025.2
+ + urllib3==2.5.0
+ + watchdog==6.0.0
+ + xarray[2025-10-23 23:59:17.673800] ==2025.10.1
+ + xyzservices==2025.4.0
+ + yarl==1.22.0
+Checking if Streamlit is installed
+Found Streamlit version 1.50.0 in the environment
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.13.9 environment at /home/adminuser/venv
+Audited 1 package in 6ms
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+[23:59:23] 🐍 Python dependencies were installed from /mount/src/coralertmet/requirements.txt using uv.
+[23:59:23] 📦 WARN: More than one requirements file detected in the repository. Available options: uv /mount/src/coralertmet/requirements.txt, poetry /mount/src/coralertmet/pyproject.toml. Used: uv with /mount/src/coralertmet/requirements.txt
+Check if streamlit is installed
+Streamlit is already installed
+[23:59:24] 📦 Processed dependencies!
+
+
+
+[23:59:27] 🐙 Pulling code changes from Github...
+[23:59:28] 📦 Processing dependencies...
+[23:59:28] 📦 Processed dependencies!
+[23:59:29] 🔄 Updated app!
+The StatsForecast module could not be imported. To enable support for the AutoARIMA, AutoETS and Croston models, please consider installing it.
+The `XGBoost` module could not be imported. To enable XGBoost support in Darts, follow the detailed instructions in the installation guide: https://github.com/unit8co/darts/blob/master/INSTALL.md
+The `XGBoost` module could not be imported. To enable XGBoost support in Darts, follow the detailed instructions in the installation guide: https://github.com/unit8co/darts/blob/master/INSTALL.md
+Datos weather_training_data no encontrados
+Modelo random_forest_storm_predictor no encontrado
+Modelo gradient_boosting_storm_predictor no encontrado
+Modelo weather_data_scaler no encontrado
+2025-10-24 00:01:09.690 MediaFileHandler: Missing file 624ab1bf00e51dffca72ee48539649778a61b3cf7f97222ac3731bf2.png
+Traceback (most recent call last):
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/memory_media_file_storage.py", line 140, in get_file
+    return self._files_by_id[file_id]
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: '624ab1bf00e51dffca72ee48539649778a61b3cf7f97222ac3731bf2'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/web/server/media_file_handler.py", line 95, in validate_absolute_path
+    self._storage.get_file(absolute_path)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/memory_media_file_storage.py", line 142, in get_file
+    raise MediaFileStorageError(
+        f"Bad filename '{filename}'. (No media file with id '{file_id}')"
+    ) from e
+streamlit.runtime.media_file_storage.MediaFileStorageError: Bad filename '624ab1bf00e51dffca72ee48539649778a61b3cf7f97222ac3731bf2.png'. (No media file with id '624ab1bf00e51dffca72ee48539649778a61b3cf7f97222ac3731bf2')
+2025-10-24 00:01:10.118 MediaFileHandler: Missing file 624ab1bf00e51dffca72ee48539649778a61b3cf7f97222ac3731bf2.png
+Traceback (most recent call last):
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/memory_media_file_storage.py", line 140, in get_file
+    return self._files_by_id[file_id]
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: '624ab1bf00e51dffca72ee48539649778a61b3cf7f97222ac3731bf2'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/web/server/media_file_handler.py", line 95, in validate_absolute_path
+    self._storage.get_file(absolute_path)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/memory_media_file_storage.py", line 142, in get_file
+    raise MediaFileStorageError(
+        f"Bad filename '{filename}'. (No media file with id '{file_id}')"
+    ) from e
+streamlit.runtime.media_file_storage.MediaFileStorageError: Bad filename '624ab1bf00e51dffca72ee48539649778a61b3cf7f97222ac3731bf2.png'. (No media file with id '624ab1bf00e51dffca72ee48539649778a61b3cf7f97222ac3731bf2')
+2025-10-24 00:01:10.393 MediaFileHandler: Missing file 624ab1bf00e51dffca72ee48539649778a61b3cf7f97222ac3731bf2.png
+Traceback (most recent call last):
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/memory_media_file_storage.py", line 140, in get_file
+    return self._files_by_id[file_id]
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: '624ab1bf00e51dffca72ee48539649778a61b3cf7f97222ac3731bf2'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/web/server/media_file_handler.py", line 95, in validate_absolute_path
+    self._storage.get_file(absolute_path)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/memory_media_file_storage.py", line 142, in get_file
+    raise MediaFileStorageError(
+        f"Bad filename '{filename}'. (No media file with id '{file_id}')"
+    ) from e
+streamlit.runtime.media_file_storage.MediaFileStorageError: Bad filename '624ab1bf00e51dffca72ee48539649778a61b3cf7f97222ac3731bf2.png'. (No media file with id '624ab1bf00e51dffca72ee48539649778a61b3cf7f97222ac3731bf2')
+2025-10-24 00:01:10.739 MediaFileHandler: Missing file 624ab1bf00e51dffca72ee48539649778a61b3cf7f97222ac3731bf2.png
+Traceback (most recent call last):
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/memory_media_file_storage.py", line 140, in get_file
+    return self._files_by_id[file_id]
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: '624ab1bf00e51dffca72ee48539649778a61b3cf7f97222ac3731bf2'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/web/server/media_file_handler.py", line 95, in validate_absolute_path
+    self._storage.get_file(absolute_path)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/memory_media_file_storage.py", line 142, in get_file
+    raise MediaFileStorageError(
+        f"Bad filename '{filename}'. (No media file with id '{file_id}')"
+    ) from e
+streamlit.runtime.media_file_storage.MediaFileStorageError: Bad filename '624ab1bf00e51dffca72ee48539649778a61b3cf7f97222ac3731bf2.png'. (No media file with id '624ab1bf00e51dffca72ee48539649778a61b3cf7f97222ac3731bf2')
+2025-10-24 00:01:18.186 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-10-24 00:01:24.927 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-10-24 00:01:24.990 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+[00:04:17] 🐙 Pulling code changes from Github...
+[00:04:18] 📦 Processing dependencies...
+[00:04:18] 📦 Processed dependencies!
+[00:04:19] 🔄 Updated app!
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:13 in <module>                                  
+                                                                                
+      10 import streamlit as st                                                 
+      11                                                                        
+      12 # Importar componentes                                                 
+  ❱   13 from components.footer import show_footer                              
+      14 from components.styles import apply_corporate_styles                   
+      15 from components.svg_icons_simple import show_svg_icon                  
+      16                                                                        
+  in _find_and_load:1360                                                        
+  in _find_and_load_unlocked:1331                                               
+  in _load_unlocked:946                                                         
+────────────────────────────────────────────────────────────────────────────────
+KeyError: 'components.footer'
+2025-10-24 00:04:20.555 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:15 in <module>                                  
+                                                                                
+      12 # Importar componentes                                                 
+      13 from components.footer import show_footer                              
+      14 from components.styles import apply_corporate_styles                   
+  ❱   15 from components.svg_icons_simple import show_svg_icon                  
+      16                                                                        
+      17 # Importar sistema de autenticación y logging                          
+      18 from auth.simple_auth import SimpleAuth, show_login_form, show_logout  
+  in _find_and_load:1360                                                        
+  in _find_and_load_unlocked:1331                                               
+  in _load_unlocked:946                                                         
+────────────────────────────────────────────────────────────────────────────────
+KeyError: 'components.svg_icons_simple'
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:13 in <module>                                  
+                                                                                
+      10 import streamlit as st                                                 
+      11                                                                        
+      12 # Importar componentes                                                 
+  ❱   13 from components.footer import show_footer                              
+      14 from components.styles import apply_corporate_styles                   
+      15 from components.svg_icons_simple import show_svg_icon                  
+      16                                                                        
+  in _find_and_load:1360                                                        
+  in _find_and_load_unlocked:1331                                               
+  in _load_unlocked:946                                                         
+────────────────────────────────────────────────────────────────────────────────
+KeyError: 'components.footer'
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:15 in <module>                                  
+                                                                                
+      12 # Importar componentes                                                 
+      13 from components.footer import show_footer                              
+      14 from components.styles import apply_corporate_styles                   
+  ❱   15 from components.svg_icons_simple import show_svg_icon                  
+      16                                                                        
+      17 # Importar sistema de autenticación y logging                          
+      18 from auth.simple_auth import SimpleAuth, show_login_form, show_logout  
+  in _find_and_load:1360                                                        
+  in _find_and_load_unlocked:1331                                               
+  in _load_unlocked:946                                                         
+────────────────────────────────────────────────────────────────────────────────
+KeyError: 'components.svg_icons_simple'
+[00:06:29] 🐙 Pulling code changes from Github...
+[00:06:31] 📦 Processing dependencies...
+[00:06:31] 📦 Processed dependencies!
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:13 in <module>                                  
+                                                                                
+      10 import streamlit as st                                                 
+      11                                                                        
+      12 # Importar componentes                                                 
+  ❱   13 from components.footer import show_footer                              
+      14 from components.styles import apply_corporate_styles                   
+      15 from components.svg_icons_simple import show_svg_icon                  
+      16                                                                        
+  in _find_and_load:1360                                                        
+  in _find_and_load_unlocked:1331                                               
+  in _load_unlocked:946                                                         
+────────────────────────────────────────────────────────────────────────────────
+KeyError: 'components'
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:13 in <module>                                  
+                                                                                
+      10 import streamlit as st                                                 
+      11                                                                        
+      12 # Importar componentes                                                 
+  ❱   13 from components.footer import show_footer                              
+      14 from components.styles import apply_corporate_styles                   
+      15 from components.svg_icons_simple import show_svg_icon                  
+      16                                                                        
+                                                                                
+  /mount/src/coralertmet/components/footer.py:8 in <module>                     
+                                                                                
+      5 import base64                                                           
+      6 from pathlib import Path                                                
+      7 try:                                                                    
+  ❱   8 │   from config.version import get_version                              
+      9 except ImportError:                                                     
+     10 │   def get_version():                                                  
+     11 │   │   return "2.3.0"                                                  
+                                                                                
+  /mount/src/coralertmet/config/__init__.py:6 in <module>                       
+                                                                                
+     3 Configuraciones centralizadas del sistema                                
+     4 """                                                                      
+     5                                                                          
+  ❱  6 from .logging_config import get_logger, get_auth_logger, setup_logging   
+     7                                                                          
+     8 __all__ = [                                                              
+     9 │   'get_logger',                                                        
+                                                                                
+  /mount/src/coralertmet/config/__init__.py:6 in <module>                       
+                                                                                
+     3 Configuraciones centralizadas del sistema                                
+     4 """                                                                      
+     5                                                                          
+  ❱  6 from .logging_config import get_logger, get_auth_logger, setup_logging   
+     7                                                                          
+     8 __all__ = [                                                              
+     9 │   'get_logger',                                                        
+  in _find_and_load:1360                                                        
+  in _find_and_load_unlocked:1331                                               
+  in _load_unlocked:946                                                         
+────────────────────────────────────────────────────────────────────────────────
+KeyError: 'config.logging_config'
+[00:06:32] 🔄 Updated app!
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:13 in <module>                                  
+                                                                                
+      10 import streamlit as st                                                 
+      11                                                                        
+      12 # Importar componentes                                                 
+  ❱   13 from components.footer import show_footer                              
+      14 from components.styles import apply_corporate_styles                   
+      15 from components.svg_icons_simple import show_svg_icon                  
+      16                                                                        
+                                                                                
+  /mount/src/coralertmet/components/footer.py:8 in <module>                     
+                                                                                
+      5 import base64                                                           
+      6 from pathlib import Path                                                
+      7 try:                                                                    
+  ❱   8 │   from config.version import get_version                              
+      9 except ImportError:                                                     
+     10 │   def get_version():                                                  
+     11 │   │   return "2.3.0"                                                  
+                                                                                
+  /mount/src/coralertmet/config/__init__.py:6 in <module>                       
+                                                                                
+     3 Configuraciones centralizadas del sistema                                
+     4 """                                                                      
+     5                                                                          
+  ❱  6 from .logging_config import get_logger, get_auth_logger, setup_logging   
+     7                                                                          
+     8 __all__ = [                                                              
+     9 │   'get_logger',                                                        
+  in _find_and_load:1360                                                        
+  in _find_and_load_unlocked:1331                                               
+  in _load_unlocked:946                                                         
+────────────────────────────────────────────────────────────────────────────────
+KeyError: 'config.logging_config'
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:13 in <module>                                  
+                                                                                
+      10 import streamlit as st                                                 
+      11                                                                        
+      12 # Importar componentes                                                 
+  ❱   13 from components.footer import show_footer                              
+      14 from components.styles import apply_corporate_styles                   
+      15 from components.svg_icons_simple import show_svg_icon                  
+      16                                                                        
+                                                                                
+  /mount/src/coralertmet/components/footer.py:8 in <module>                     
+                                                                                
+      5 import base64                                                           
+      6 from pathlib import Path                                                
+      7 try:                                                                    
+  ❱   8 │   from config.version import get_version                              
+      9 except ImportError:                                                     
+     10 │   def get_version():                                                  
+     11 │   │   return "2.3.0"                                                  
+  in _find_and_load:1360                                                        
+  in _find_and_load_unlocked:1331                                               
+  in _load_unlocked:946                                                         
+────────────────────────────────────────────────────────────────────────────────
+KeyError: 'config.version'
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:13 in <module>                                  
+                                                                                
+      10 import streamlit as st                                                 
+      11                                                                        
+      12 # Importar componentes                                                 
+  ❱   13 from components.footer import show_footer                              
+      14 from components.styles import apply_corporate_styles                   
+      15 from components.svg_icons_simple import show_svg_icon                  
+      16                                                                        
+                                                                                
+  /mount/src/coralertmet/components/footer.py:8 in <module>                     
+                                                                                
+      5 import base64                                                           
+      6 from pathlib import Path                                                
+      7 try:                                                                    
+  ❱   8 │   from config.version import get_version                              
+      9 except ImportError:                                                     
+     10 │   def get_version():                                                  
+     11 │   │   return "2.3.0"                                                  
+  in _find_and_load:1360                                                        
+  in _find_and_load_unlocked:1331                                               
+  in _load_unlocked:946                                                         
+────────────────────────────────────────────────────────────────────────────────
+KeyError: 'config.version'
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:13 in <module>                                  
+                                                                                
+      10 import streamlit as st                                                 
+      11                                                                        
+      12 # Importar componentes                                                 
+  ❱   13 from components.footer import show_footer                              
+      14 from components.styles import apply_corporate_styles                   
+      15 from components.svg_icons_simple import show_svg_icon                  
+      16                                                                        
+                                                                                
+  /mount/src/coralertmet/components/footer.py:8 in <module>                     
+                                                                                
+      5 import base64                                                           
+      6 from pathlib import Path                                                
+      7 try:                                                                    
+  ❱   8 │   from config.version import get_version                              
+      9 except ImportError:                                                     
+     10 │   def get_version():                                                  
+     11 │   │   return "2.3.0"                                                  
+                                                                                
+  /mount/src/coralertmet/config/__init__.py:6 in <module>                       
+                                                                                
+     3 Configuraciones centralizadas del sistema                                
+     4 """                                                                      
+     5                                                                          
+  ❱  6 from .logging_config import get_logger, get_auth_logger, setup_logging   
+     7                                                                          
+     8 __all__ = [                                                              
+     9 │   'get_logger',                                                        
+  in _find_and_load:1360                                                        
+  in _find_and_load_unlocked:1331                                               
+  in _load_unlocked:946                                                         
+────────────────────────────────────────────────────────────────────────────────
+KeyError: 'config.logging_config'
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:13 in <module>                                  
+                                                                                
+      10 import streamlit as st                                                 
+      11                                                                        
+      12 # Importar componentes                                                 
+  ❱   13 from components.footer import show_footer                              
+      14 from components.styles import apply_corporate_styles                   
+      15 from components.svg_icons_simple import show_svg_icon                  
+      16                                                                        
+                                                                                
+  /mount/src/coralertmet/components/footer.py:8 in <module>                     
+                                                                                
+      5 import base64                                                           
+      6 from pathlib import Path                                                
+      7 try:                                                                    
+  ❱   8 │   from config.version import get_version                              
+      9 except ImportError:                                                     
+     10 │   def get_version():                                                  
+     11 │   │   return "2.3.0"                                                  
+  in _find_and_load:1360                                                        
+  in _find_and_load_unlocked:1331                                               
+  in _load_unlocked:946                                                         
+────────────────────────────────────────────────────────────────────────────────
+KeyError: 'config.version'
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:13 in <module>                                  
+                                                                                
+      10 import streamlit as st                                                 
+      11                                                                        
+      12 # Importar componentes                                                 
+  ❱   13 from components.footer import show_footer                              
+      14 from components.styles import apply_corporate_styles                   
+      15 from components.svg_icons_simple import show_svg_icon                  
+      16                                                                        
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'show_footer' from 'components.footer' 
+(/mount/src/coralertmet/components/footer.py)
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:13 in <module>                                  
+                                                                                
+      10 import streamlit as st                                                 
+      11                                                                        
+      12 # Importar componentes                                                 
+  ❱   13 from components.footer import show_footer                              
+      14 from components.styles import apply_corporate_styles                   
+      15 from components.svg_icons_simple import show_svg_icon                  
+      16                                                                        
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'show_footer' from 'components.footer' 
+(/mount/src/coralertmet/components/footer.py)
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:13 in <module>                                  
+                                                                                
+      10 import streamlit as st                                                 
+      11                                                                        
+      12 # Importar componentes                                                 
+  ❱   13 from components.footer import show_footer                              
+      14 from components.styles import apply_corporate_styles                   
+      15 from components.svg_icons_simple import show_svg_icon                  
+      16                                                                        
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'show_footer' from 'components.footer' 
+(/mount/src/coralertmet/components/footer.py)
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:13 in <module>                                  
+                                                                                
+      10 import streamlit as st                                                 
+      11                                                                        
+      12 # Importar componentes                                                 
+  ❱   13 from components.footer import show_footer                              
+      14 from components.styles import apply_corporate_styles                   
+      15 from components.svg_icons_simple import show_svg_icon                  
+      16                                                                        
+                                                                                
+  /mount/src/coralertmet/components/footer.py:8 in <module>                     
+                                                                                
+      5 import base64                                                           
+      6 from pathlib import Path                                                
+      7 try:                                                                    
+  ❱   8 │   from config.version import get_version                              
+      9 except ImportError:                                                     
+     10 │   def get_version():                                                  
+     11 │   │   return "2.3.0"                                                  
+                                                                                
+  /mount/src/coralertmet/config/__init__.py:6 in <module>                       
+                                                                                
+     3 Configuraciones centralizadas del sistema                                
+     4 """                                                                      
+     5                                                                          
+  ❱  6 from .logging_config import get_logger, get_auth_logger, setup_logging   
+     7                                                                          
+     8 __all__ = [                                                              
+     9 │   'get_logger',                                                        
+                                                                                
+  /mount/src/coralertmet/config/__init__.py:6 in <module>                       
+                                                                                
+     3 Configuraciones centralizadas del sistema                                
+     4 """                                                                      
+     5                                                                          
+  ❱  6 from .logging_config import get_logger, get_auth_logger, setup_logging   
+     7                                                                          
+     8 __all__ = [                                                              
+     9 │   'get_logger',                                                        
+  in _find_and_load:1360                                                        
+  in _find_and_load_unlocked:1331                                               
+  in _load_unlocked:946                                                         
+────────────────────────────────────────────────────────────────────────────────
+KeyError: 'config.logging_config'
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:13 in <module>                                  
+                                                                                
+      10 import streamlit as st                                                 
+      11                                                                        
+      12 # Importar componentes                                                 
+  ❱   13 from components.footer import show_footer                              
+      14 from components.styles import apply_corporate_styles                   
+      15 from components.svg_icons_simple import show_svg_icon                  
+      16                                                                        
+  in _find_and_load:1360                                                        
+  in _find_and_load_unlocked:1331                                               
+  in _load_unlocked:946                                                         
+────────────────────────────────────────────────────────────────────────────────
+KeyError: 'components.footer'
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:13 in <module>                                  
+                                                                                
+      10 import streamlit as st                                                 
+      11                                                                        
+      12 # Importar componentes                                                 
+  ❱   13 from components.footer import show_footer                              
+      14 from components.styles import apply_corporate_styles                   
+      15 from components.svg_icons_simple import show_svg_icon                  
+      16                                                                        
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'show_footer' from 'components.footer' 
+(/mount/src/coralertmet/components/footer.py)
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:13 in <module>                                  
+                                                                                
+      10 import streamlit as st                                                 
+      11                                                                        
+      12 # Importar componentes                                                 
+  ❱   13 from components.footer import show_footer                              
+      14 from components.styles import apply_corporate_styles                   
+      15 from components.svg_icons_simple import show_svg_icon                  
+      16                                                                        
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'show_footer' from 'components.footer' 
+(/mount/src/coralertmet/components/footer.py)
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:14 in <module>                                  
+                                                                                
+      11                                                                        
+      12 # Importar componentes                                                 
+      13 from components.footer import show_footer                              
+  ❱   14 from components.styles import apply_corporate_styles                   
+      15 from components.svg_icons_simple import show_svg_icon                  
+      16                                                                        
+      17 # Importar sistema de autenticación y logging                          
+  in _find_and_load:1360                                                        
+  in _find_and_load_unlocked:1331                                               
+  in _load_unlocked:946                                                         
+────────────────────────────────────────────────────────────────────────────────
+KeyError: 'components.styles'
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:13 in <module>                                  
+                                                                                
+      10 import streamlit as st                                                 
+      11                                                                        
+      12 # Importar componentes                                                 
+  ❱   13 from components.footer import show_footer                              
+      14 from components.styles import apply_corporate_styles                   
+      15 from components.svg_icons_simple import show_svg_icon                  
+      16                                                                        
+  in _find_and_load:1360                                                        
+  in _find_and_load_unlocked:1331                                               
+  in _load_unlocked:946                                                         
+────────────────────────────────────────────────────────────────────────────────
+KeyError: 'components.footer'
+2025-10-24 00:06:47.783 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+[00:07:43] 🐙 Pulling code changes from Github...
+[00:07:44] 📦 Processing dependencies...
+[00:07:44] 📦 Processed dependencies!
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:13 in <module>                                  
+                                                                                
+      10 import streamlit as st                                                 
+      11                                                                        
+      12 # Importar componentes                                                 
+  ❱   13 from components.footer import show_footer                              
+      14 from components.styles import apply_corporate_styles                   
+      15 from components.svg_icons_simple import show_svg_icon                  
+      16                                                                        
+  in _find_and_load:1360                                                        
+  in _find_and_load_unlocked:1331                                               
+  in _load_unlocked:946                                                         
+────────────────────────────────────────────────────────────────────────────────
+KeyError: 'components.footer'
+[00:07:46] 🔄 Updated app!
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:13 in <module>                                  
+                                                                                
+      10 import streamlit as st                                                 
+      11                                                                        
+      12 # Importar componentes                                                 
+  ❱   13 from components.footer import show_footer                              
+      14 from components.styles import apply_corporate_styles                   
+      15 from components.svg_icons_simple import show_svg_icon                  
+      16                                                                        
+                                                                                
+  /mount/src/coralertmet/components/footer.py:8 in <module>                     
+                                                                                
+      5 import base64                                                           
+      6 from pathlib import Path                                                
+      7 try:                                                                    
+  ❱   8 │   from config.version import get_version                              
+      9 except ImportError:                                                     
+     10 │   def get_version():                                                  
+     11 │   │   return "2.3.0"                                                  
+                                                                                
+  /mount/src/coralertmet/config/__init__.py:6 in <module>                       
+                                                                                
+     3 Configuraciones centralizadas del sistema                                
+     4 """                                                                      
+     5                                                                          
+  ❱  6 from .logging_config import get_logger, get_auth_logger, setup_logging   
+     7                                                                          
+     8 __all__ = [                                                              
+     9 │   'get_logger',                                                        
+  in _find_and_load:1360                                                        
+  in _find_and_load_unlocked:1331                                               
+  in _load_unlocked:946                                                         
+────────────────────────────────────────────────────────────────────────────────
+KeyError: 'config.logging_config'
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:13 in <module>                                  
+                                                                                
+      10 import streamlit as st                                                 
+      11                                                                        
+      12 # Importar componentes                                                 
+  ❱   13 from components.footer import show_footer                              
+      14 from components.styles import apply_corporate_styles                   
+      15 from components.svg_icons_simple import show_svg_icon                  
+      16                                                                        
+  in _find_and_load:1360                                                        
+  in _find_and_load_unlocked:1331                                               
+  in _load_unlocked:946                                                         
+────────────────────────────────────────────────────────────────────────────────
+KeyError: 'components'
+2025-10-24 00:07:57.507 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+[00:11:06] 🐙 Pulling code changes from Github...
+[00:11:07] 📦 Processing dependencies...
+[00:11:07] 📦 Processed dependencies!
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:14 in <module>                                  
+                                                                                
+      11                                                                        
+      12 # Importar componentes con manejo de errores                           
+      13 try:                                                                   
+  ❱   14 │   from components.footer import show_footer                          
+      15 except ImportError:                                                    
+      16 │   def show_footer():                                                 
+      17 │   │   st.markdown("---")                                             
+  in _find_and_load:1360                                                        
+  in _find_and_load_unlocked:1331                                               
+  in _load_unlocked:946                                                         
+────────────────────────────────────────────────────────────────────────────────
+KeyError: 'components'
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:14 in <module>                                  
+                                                                                
+      11                                                                        
+      12 # Importar componentes con manejo de errores                           
+      13 try:                                                                   
+  ❱   14 │   from components.footer import show_footer                          
+      15 except ImportError:                                                    
+      16 │   def show_footer():                                                 
+      17 │   │   st.markdown("---")                                             
+  in _find_and_load:1360                                                        
+  in _find_and_load_unlocked:1331                                               
+  in _load_unlocked:946                                                         
+────────────────────────────────────────────────────────────────────────────────
+KeyError: 'components.footer'
+[00:11:09] 🔄 Updated app!
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:21 in <module>                                  
+                                                                                
+      18 │   │   st.markdown("© 2025 CorAlertMet Intelligence")                 
+      19                                                                        
+      20 try:                                                                   
+  ❱   21 │   from components.styles import apply_corporate_styles               
+      22 except ImportError:                                                    
+      23 │   def apply_corporate_styles():                                      
+      24 │   │   pass                                                           
+  in _find_and_load:1360                                                        
+  in _find_and_load_unlocked:1331                                               
+  in _load_unlocked:946                                                         
+────────────────────────────────────────────────────────────────────────────────
+KeyError: 'components.styles'
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:1092 in <module>                                
+                                                                                
+    1089 │   │   st.info("👆 Panel de administración completo disponible en pa  
+    1090                                                                        
+    1091 if __name__ == "__main__":                                             
+  ❱ 1092 │   main()                                                             
+    1093                                                                        
+                                                                                
+  /mount/src/coralertmet/app.py:202 in main                                     
+                                                                                
+     199 │   elif page == "Mapa Interactivo":                                   
+     200 │   │   show_map_page(selected_api, selected_model)                    
+     201 │   elif page == "Panel ML":                                           
+  ❱  202 │   │   show_ml_dashboard(selected_api, selected_model)                
+     203 │   elif page == "Referencia":                                         
+     204 │   │   show_reference()                                               
+     205                                                                        
+                                                                                
+  /mount/src/coralertmet/app.py:1024 in show_ml_dashboard                       
+                                                                                
+    1021 │   │   sys.path.append(os.path.join(os.path.dirname(__file__), 'page  
+    1022 │   │                                                                  
+    1023 │   │   # Importar la función main del ML dashboard                    
+  ❱ 1024 │   │   from pages_modules.ml_dashboard import main as ml_dashboard_m  
+    1025 │   │   ml_dashboard_main(selected_api, selected_model)                
+    1026 │                                                                      
+    1027 │   except ImportError as e:                                           
+                                                                                
+  /mount/src/coralertmet/pages_modules/ml_dashboard.py:18 in <module>           
+                                                                                
+     15 # sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src')  
+     16                                                                         
+     17 # Importar componentes                                                  
+  ❱  18 from components.footer import show_footer                               
+     19 from components.styles import apply_corporate_styles                    
+     20 from components.svg_icons_simple import show_svg_icon                   
+     21                                                                         
+  in _find_and_load:1360                                                        
+  in _find_and_load_unlocked:1331                                               
+  in _load_unlocked:946                                                         
+────────────────────────────────────────────────────────────────────────────────
+KeyError: 'components.footer'
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:21 in <module>                                  
+                                                                                
+      18 │   │   st.markdown("© 2025 CorAlertMet Intelligence")                 
+      19                                                                        
+      20 try:                                                                   
+  ❱   21 │   from components.styles import apply_corporate_styles               
+      22 except ImportError:                                                    
+      23 │   def apply_corporate_styles():                                      
+      24 │   │   pass                                                           
+  in _find_and_load:1360                                                        
+  in _find_and_load_unlocked:1331                                               
+  in _load_unlocked:946                                                         
+────────────────────────────────────────────────────────────────────────────────
+KeyError: 'components.styles'
+[00:13:39] 🐙 Pulling code changes from Github...
+[00:13:40] 📦 Processing dependencies...
+[00:13:40] 📦 Processed dependencies!
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:14 in <module>                                  
+                                                                                
+      11                                                                        
+      12 # Importar componentes con manejo de errores                           
+      13 try:                                                                   
+  ❱   14 │   from components.footer import show_footer                          
+      15 except ImportError:                                                    
+      16 │   def show_footer():                                                 
+      17 │   │   st.markdown("---")                                             
+  in _find_and_load:1360                                                        
+  in _find_and_load_unlocked:1331                                               
+  in _load_unlocked:946                                                         
+────────────────────────────────────────────────────────────────────────────────
+KeyError: 'components.footer'
+[00:13:42] 🔄 Updated app!
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:669 in code_to_exec                                     
+                                                                                
+  /mount/src/coralertmet/app.py:14 in <module>                                  
+                                                                                
+      11                                                                        
+      12 # Importar componentes con manejo de errores                           
+      13 try:                                                                   
+  ❱   14 │   from components.footer import show_footer                          
+      15 except ImportError:                                                    
+      16 │   def show_footer():                                                 
+      17 │   │   st.markdown("---")                                             
+  in _find_and_load:1360                                                        
+  in _find_and_load_unlocked:1331                                               
+  in _load_unlocked:946                                                         
+────────────────────────────────────────────────────────────────────────────────
+KeyError: 'components.footer'

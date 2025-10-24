@@ -90,7 +90,11 @@ class IntelligentAlertSystem:
         X_scaled = self.scaler.transform(X)
 
         # Predecir anomalías
-        anomaly_scores = self.anomaly_model.decision_function(X_scaled)
+        try:
+            anomaly_scores = self.anomaly_model.decision_function(X_scaled)
+        except AttributeError:
+            # Fallback para versiones sin offset_
+            anomaly_scores = self.anomaly_model.score_samples(X_scaled)
         predictions = self.anomaly_model.predict(X_scaled)
 
         df['anomaly_score'] = anomaly_scores

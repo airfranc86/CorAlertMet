@@ -9,14 +9,31 @@ import sys
 import requests
 import streamlit as st
 
-# Importar componentes
-from components.footer import show_footer
-from components.styles import apply_corporate_styles
-from components.svg_icons_simple import show_svg_icon
+# Funciones dummy para componentes
+def show_footer():
+    st.markdown("---")
+    st.markdown("© 2025 CorAlertMet Intelligence")
+
+def apply_corporate_styles():
+    pass
+
+def show_svg_icon(icon_name, width=24, height=24, animation="none", color="#3B82F6"):
+    st.markdown(f'<div style="font-size: {width}px; text-align: center;">❓</div>', unsafe_allow_html=True)
 
 # Importar sistema de autenticación y logging
-from auth.simple_auth import SimpleAuth, show_login_form, show_logout_section, require_auth
-from config.logging_config import setup_logging, get_logger
+try:
+    from auth.simple_auth import SimpleAuth, show_login_form, show_logout_section, require_auth
+except ImportError:
+    st.error("Error importando módulo de autenticación")
+    st.stop()
+
+try:
+    from config.logging_config import setup_logging, get_logger
+except ImportError:
+    def setup_logging():
+        pass
+    def get_logger():
+        return None
 
 def create_responsive_columns(num_columns=4):
     """
@@ -49,19 +66,12 @@ apply_corporate_styles()
 
 # Configurar API key desde múltiples fuentes
 def get_api_key():
-    """Obtener API key desde secrets o variables de entorno"""
-    # 1. Intentar desde Streamlit secrets (directo)
-    if hasattr(st, 'secrets') and 'OPENWEATHER_API_KEY' in st.secrets:
-        return st.secrets['OPENWEATHER_API_KEY']
-
-    # 1b. Intentar desde Streamlit secrets (anidado en SECRETS)
-    if (hasattr(st, 'secrets') and 'SECRETS' in st.secrets and
-            'OPENWEATHER_API_KEY' in st.secrets['SECRETS']):
-        return st.secrets['SECRETS']['OPENWEATHER_API_KEY']
-
-    # 2. Intentar desde variables de entorno
-    if 'OPENWEATHER_API_KEY' in os.environ:
-        return os.environ['OPENWEATHER_API_KEY']
+    """Obtener API key desde Streamlit Secrets"""
+    try:
+        return st.secrets.secrets['OPENWEATHER_API_KEY']
+    except KeyError:
+        st.error("⚠️ **Error**: OPENWEATHER_API_KEY no encontrada en Streamlit Secrets.")
+        return None
 
     # 3. Intentar desde archivo .env
     try:
@@ -133,15 +143,15 @@ def main():
 
         # Iconos para APIs
         api_options = [
-            ("OpenWeatherMap", "cloud"),
-            ("Windy", "wind")
+            ("Windy", "wind"),
+            ("OpenWeatherMap", "cloud")
         ]
 
         api_names = [option[0] for option in api_options]
         selected_api = st.radio(
             "Seleccionar API:",
             api_names,
-            index=0,
+            index=0,  # Windy por defecto
             help="Selecciona la API meteorológica a utilizar"
         )
 
@@ -151,10 +161,10 @@ def main():
             st.markdown("### Modelo de Pronóstico")
 
             windy_models = [
-                ("ECMWF", "Modelo europeo de alta precisión (14 km)"),
-                ("GFS27", "Sistema de pronóstico global de NOAA (27 km)"),
-                ("ICON7", "Modelo alemán para Europa (7 km)"),
-                ("HRRR", "Alta resolución para Estados Unidos (3 km)")
+                ("HRRR", "Alta resolución para Estados Unidos (3 km) - 18x/día"),
+                ("ICON7", "Modelo alemán para Europa (7 km) - 4x/día"),
+                ("GFS27", "Sistema de pronóstico global de NOAA (27 km) - 4x/día"),
+                ("ECMWF", "Modelo europeo de alta precisión (14 km) - 2x/día")
             ]
 
             model_names = [option[0] for option in windy_models]
@@ -246,9 +256,10 @@ def get_weather_data_from_api(selected_api, location="Córdoba,AR", selected_mod
 @st.cache_data(ttl=300, show_spinner=False)  # Cache 5 minutos para datos públicos
 def get_openweather_data(location):
     """Obtener datos de OpenWeatherMap"""
-    api_key = (st.secrets.get("openweather_api_key") or
-               st.secrets.get("SECRETS", {}).get("openweather_api_key", ""))
-    if not api_key:
+    try:
+        api_key = st.secrets.secrets["OPENWEATHER_API_KEY"]
+    except KeyError:
+        st.error("⚠️ **Error**: OPENWEATHER_API_KEY no encontrada en Streamlit Secrets.")
         return None
 
     # Obtener coordenadas
@@ -302,9 +313,10 @@ def get_openweather_data(location):
 def get_windy_data(location, selected_model=None):
     """Obtener datos de Windy (simulado por ahora - Windy requiere autenticación compleja)"""
     # Windy API requiere autenticación OAuth, por ahora simulamos con OpenWeatherMap
-    api_key = (st.secrets.get("openweather_api_key") or
-               st.secrets.get("SECRETS", {}).get("openweather_api_key", ""))
-    if not api_key:
+    try:
+        api_key = st.secrets.secrets["OPENWEATHER_API_KEY"]
+    except KeyError:
+        st.error("⚠️ **Error**: OPENWEATHER_API_KEY no encontrada en Streamlit Secrets.")
         return None
 
     # Usar OpenWeatherMap como base y simular variaciones de Windy
@@ -315,14 +327,21 @@ def get_windy_data(location, selected_model=None):
     # Simular variaciones típicas de Windy (datos más precisos)
     import random
 
-    # Definir modelos de Windy
+    # Definir modelos de Windy (ordenado por frecuencia de actualización - más updates = mejor)
     windy_models = {
-        "ECMWF": {
-            "name": "ECMWF",
-            "resolution": "14 km",
-            "update_frequency": "12 horas",
-            "description": "Modelo europeo de alta precisión",
-            "accuracy": 0.92
+        "HRRR": {
+            "name": "HRRR",
+            "resolution": "3 km",
+            "update_frequency": "18x/día",
+            "description": "Alta resolución para Estados Unidos",
+            "accuracy": 0.94
+        },
+        "ICON7": {
+            "name": "ICON7",
+            "resolution": "7 km",
+            "update_frequency": "4x/día",
+            "description": "Modelo alemán para Europa",
+            "accuracy": 0.90
         },
         "GFS27": {
             "name": "GFS27",
@@ -331,19 +350,12 @@ def get_windy_data(location, selected_model=None):
             "description": "Sistema de pronóstico global de NOAA",
             "accuracy": 0.88
         },
-        "ICON7": {
-            "name": "ICON7",
-            "resolution": "7 km",
-            "update_frequency": "6 horas",
-            "description": "Modelo alemán para Europa",
-            "accuracy": 0.90
-        },
-        "HRRR": {
-            "name": "HRRR",
-            "resolution": "3 km",
-            "update_frequency": "18x/día",
-            "description": "Alta resolución para Estados Unidos",
-            "accuracy": 0.94
+        "ECMWF": {
+            "name": "ECMWF",
+            "resolution": "14 km",
+            "update_frequency": "2x/día",
+            "description": "Modelo europeo de alta precisión",
+            "accuracy": 0.92
         }
     }
 
@@ -388,15 +400,17 @@ def get_api_status(selected_api):
     """Verificar el estado de la API seleccionada"""
     try:
         if selected_api == "OpenWeatherMap":
-            # Intentar ambas formas de acceso
-            api_key = (st.secrets.get("openweather_api_key") or
-               st.secrets.get("SECRETS", {}).get("openweather_api_key", ""))
-            return {"available": bool(api_key), "api": "OpenWeatherMap"}
+            try:
+                api_key = st.secrets.secrets["OPENWEATHER_API_KEY"]
+                return {"available": bool(api_key), "api": "OpenWeatherMap"}
+            except KeyError:
+                return {"available": False, "api": "OpenWeatherMap"}
         elif selected_api == "Windy":
-            # Intentar ambas formas de acceso
-            api_key = (st.secrets.get("windy_api_key") or
-               st.secrets.get("SECRETS", {}).get("windy_api_key", ""))
-            return {"available": bool(api_key), "api": "Windy"}
+            try:
+                api_key = st.secrets.secrets["WINDY_API_KEY"]
+                return {"available": bool(api_key), "api": "Windy"}
+            except KeyError:
+                return {"available": False, "api": "Windy"}
     except:
         return {"available": False, "api": selected_api}
 
@@ -892,36 +906,36 @@ def show_model_comparison():
 
     with col1:
         st.markdown("""
-        **🌍 ECMWF** - Modelo Europeo
-        - Resolución: 14 km
-        - Precisión: 92%
-        - Ideal para: Precipitaciones
+        **🌍 HRRR** - Alta Resolución
+        - Resolución: 3 km | Actualización: 18x/día
+        - Precisión: 94%
+        - Ideal para: Estados Unidos
         """)
 
         st.markdown("""
-        **🌍 HRRR** - Alta Resolución
-        - Resolución: 3 km
-        - Precisión: 94%
-        - Ideal para: Estados Unidos
+        **🌍 ICON7** - Modelo Alemán
+        - Resolución: 7 km | Actualización: 4x/día
+        - Precisión: 90%
+        - Ideal para: Europa
         """)
 
     with col2:
         st.markdown("""
         **🌍 GFS27** - Global NOAA
-        - Resolución: 27 km
+        - Resolución: 27 km | Actualización: 4x/día
         - Precisión: 88%
         - Ideal para: Pronósticos largos
         """)
 
         st.markdown("""
-        **🌍 ICON7** - Modelo Alemán
-        - Resolución: 7 km
-        - Precisión: 90%
-        - Ideal para: Europa
+        **🌍 ECMWF** - Modelo Europeo
+        - Resolución: 14 km | Actualización: 2x/día
+        - Precisión: 92%
+        - Ideal para: Precipitaciones
         """)
 
     # Información adicional compacta
-    st.info("💡 **Recomendación**: ECMWF para uso general, HRRR para máxima precisión local")
+    st.info("💡 **Recomendación**: Modelos ordenados por frecuencia de actualización (más updates = mejor precisión)")
 
     # Niveles de Alerta Meteorológica - Movido aquí
     st.markdown("---")
@@ -998,7 +1012,7 @@ def show_ml_dashboard(selected_api="OpenWeatherMap", selected_model=None):
         sys.path.append(os.path.join(os.path.dirname(__file__), 'pages_modules'))
 
         # Importar la función main del ML dashboard
-        from ml_dashboard import main as ml_dashboard_main
+        from pages_modules.ml_dashboard import main as ml_dashboard_main
         ml_dashboard_main(selected_api, selected_model)
 
     except ImportError as e:
@@ -1036,7 +1050,7 @@ def show_map_page(selected_api="OpenWeatherMap", selected_model=None):
         sys.path.append(os.path.join(os.path.dirname(__file__), 'pages_modules'))
 
         # Importar la función main del mapa
-        from map_live import main as map_main
+        from pages_modules.map_live import main as map_main
         map_main(selected_api, selected_model)
 
     except ImportError as e:

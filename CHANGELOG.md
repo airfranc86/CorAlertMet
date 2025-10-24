@@ -5,7 +5,13 @@ Todos los cambios notables de este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/),
 y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.3.0] - 2025-01-16
+## [2.3.0] - 2025-01-23
+
+### 🔧 Corregido
+- **Acceso a Streamlit Secrets**: Corregido formato de acceso a variables de entorno en Streamlit Cloud
+  - Cambio de `st.secrets.get()` a `st.secrets.secrets["VARIABLE"]`
+  - Afecta: Autenticación, APIs de OpenWeatherMap y Windy
+  - **IMPORTANTE**: Para futuras configuraciones, usar formato `st.secrets.secrets["NOMBRE_VARIABLE"]`
 
 ### 🎉 Agregado
 - **Sistema de indicadores visuales de viento** - Flechas SVG direccionales para mostrar dirección \

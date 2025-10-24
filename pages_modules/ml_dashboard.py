@@ -14,16 +14,34 @@ from datetime import datetime, timedelta
 # Agregar src al path (comentado - directorio src no existe)
 # sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
 
-# Importar componentes
-from components.footer import show_footer
-from components.styles import apply_corporate_styles
-from components.svg_icons_smooth import show_svg_icon
+# Funciones dummy para componentes
+def show_footer():
+    st.markdown("---")
+    st.markdown("© 2025 CorAlertMet Intelligence")
 
-# Importar módulos ML
-from pages_modules.ml_models.precision_metrics import show_precision_metrics
-from pages_modules.ml_models.advanced_predictions import show_advanced_predictions
-from pages_modules.ml_models.intelligent_alerts import show_intelligent_alerts
-from pages_modules.ml_models.model_validation import show_model_validation
+def apply_corporate_styles():
+    pass
+
+def show_svg_icon(icon_name, width=24, height=24, animation="none", color="#3B82F6"):
+    st.markdown(f'<div style="font-size: {width}px; text-align: center;">❓</div>', unsafe_allow_html=True)
+
+# Importar módulos ML directamente
+try:
+    from ml_models.precision_metrics import show_precision_metrics
+    from ml_models.advanced_predictions import show_advanced_predictions
+    from ml_models.intelligent_alerts import show_intelligent_alerts
+    from ml_models.model_validation import show_model_validation
+except ImportError as e:
+    st.error(f"Error importando módulos ML: {e}")
+    # Definir funciones dummy
+    def show_precision_metrics(*args, **kwargs):
+        st.error("Módulo de precisión no disponible")
+    def show_advanced_predictions(*args, **kwargs):
+        st.error("Módulo de predicciones no disponible")
+    def show_intelligent_alerts(*args, **kwargs):
+        st.error("Módulo de alertas no disponible")
+    def show_model_validation(*args, **kwargs):
+        st.error("Módulo de validación no disponible")
 
 # Configuración de la página
 st.set_page_config(

@@ -12,7 +12,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingRegressor
-from sklearn.model_selection import TimeSeriesSplit
+from sklearn.model_selection import TimeSeriesSplit, cross_val_score
 from sklearn.preprocessing import StandardScaler
 
 warnings.filterwarnings('ignore')
@@ -264,46 +264,8 @@ def show_model_validation():
 
         comparison_df = pd.DataFrame(comparison_data)
 
-        # Crear gráfico de líneas comparativo
-        fig_comparison = px.line(
-            comparison_df,
-            x='Fecha',
-            y='Temperatura',
-            color='Modelo',
-            title="🌡️ Comparación de Temperaturas - Modelos de Windy",
-            labels={'Temperatura': 'Temperatura (°C)', 'Fecha': 'Tiempo'},
-            color_discrete_map={
-                'HRRR': '#FF6B6B',      # Rojo para HRRR (mayor precisión)
-                'ECMWF': '#4ECDC4',     # Verde azulado para ECMWF
-                'GFS27': '#45B7D1'      # Azul para GFS27
-            }
-        )
-
-        # Personalizar el gráfico
-        fig_comparison.update_layout(
-            height=400,
-            xaxis_title="Tiempo",
-            yaxis_title="Temperatura (°C)",
-            legend=dict(
-                orientation="h",
-                yanchor="bottom",
-                y=1.02,
-                xanchor="right",
-                x=1
-            ),
-            hovermode='x unified'
-        )
-
-        # Agregar línea de referencia (temperatura base)
-        fig_comparison.add_hline(
-            y=temperature.mean(),
-            line_dash="dash",
-            line_color="gray",
-            annotation_text="Temperatura Base",
-            annotation_position="top right"
-        )
-
-        st.plotly_chart(fig_comparison, use_container_width=True)
+        # Gráfico lineal eliminado - solo mostrar mensaje informativo
+        st.info("📊 Gráfico de comparación de temperaturas no disponible en esta versión.")
 
         # Crear gráfico de dispersión para mostrar precisión
         st.markdown("#### 🎯 Análisis de Precisión por Modelo")
@@ -418,8 +380,8 @@ def show_model_validation():
 
         # Validación básica sin Darts
         st.info(
-            "💡 Para validación avanzada con modelos de Windy,
-            instala Darts: `pip install darts`")
+            "💡 Para validación avanzada con modelos de Windy, "
+            "instala Darts: `pip install darts`")
 
         # Simular validación básica
         st.markdown("#### 🌍 Simulación de Modelos de Windy")

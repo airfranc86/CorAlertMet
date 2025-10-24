@@ -389,9 +389,7 @@ def create_wind_barb_enhanced(wind_speed: float, wind_direction: int) -> str:
         {''.join([f'<line x1="{15 + i*3}" y1="10" x2="{15 + i*3}" y2="5" stroke="{color}" stroke-width="2" stroke-linecap="round"/>' for i in range(full_plumes)])}
 
         <!-- Media pluma -->
-{f'<line x1 = (
-            "{15 + full_plumes*3}" y1="10" x2="{15 + full_plumes*3}" y2="7.5" stroke="{color}" stroke-width="2" stroke-linecap="round"/>' if half_plume else ''}
-        )
+        {f'<line x1="{15 + full_plumes*3}" y1="10" x2="{15 + full_plumes*3}" y2="7.5" stroke="{color}" stroke-width="2" stroke-linecap="round"/>' if half_plume else ''}
 
         <!-- Flecha de dirección -->
         <path d="M35 10L30 7L30 13L35 10Z" fill="{color}"/>

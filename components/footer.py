@@ -4,7 +4,11 @@ Footer component for CorAlertMet Intelligence
 import streamlit as st
 import base64
 from pathlib import Path
-from config.version import get_version
+try:
+    from config.version import get_version
+except ImportError:
+    def get_version():
+        return "2.3.0"
 
 def show_footer():
     """Mostrar footer profesional con logo integrado"""

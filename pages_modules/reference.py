@@ -12,7 +12,7 @@ import os
 # Importar componentes
 from components.footer import show_footer
 from components.styles import apply_corporate_styles
-from components.svg_icons_smooth import show_svg_icon
+# from components.svg_icons_simple import show_svg_icon  # Import moved inside functions
 
 # Configuración de la página
 st.set_page_config(
@@ -30,6 +30,7 @@ def main():
     # Header principal con icono SVG
     col1, col2 = st.columns([1, 20])
     with col1:
+        from components.svg_icons_simple import show_svg_icon
         show_svg_icon("book", width=48, height=48, animation="pulse", color="#3B82F6")
     with col2:
         st.title("Referencia Técnica")
@@ -38,6 +39,7 @@ def main():
     # Variables Meteorológicas
     col1, col2 = st.columns([1, 20])
     with col1:
+        from components.svg_icons_simple import show_svg_icon
         show_svg_icon("thermometer", width=32, height=32, animation="pulse", color="#EF4444")
     with col2:
         st.header("Variables Meteorológicas")
@@ -46,6 +48,7 @@ def main():
     with col1:
         col1_1, col1_2 = st.columns([1, 4])
         with col1_1:
+            from components.svg_icons_simple import show_svg_icon
             show_svg_icon("wind", width=20, height=20, animation="rotate", color="#10B981")
         with col1_2:
             st.info("**Viento**\n> 50 km/h crítico\nRáfagas > 70 km/h")
@@ -53,6 +56,7 @@ def main():
     with col2:
         col2_1, col2_2 = st.columns([1, 4])
         with col2_1:
+            from components.svg_icons_simple import show_svg_icon
             show_svg_icon("droplet", width=20, height=20, animation="bounce", color="#3B82F6")
         with col2_2:
             st.info("**Humedad**\n> 80% crítico\nPunto rocío > 20°C")
@@ -60,6 +64,7 @@ def main():
     with col3:
         col3_1, col3_2 = st.columns([1, 4])
         with col3_1:
+            from components.svg_icons_simple import show_svg_icon
             show_svg_icon("gauge", width=20, height=20, animation="scale", color="#8B5CF6")
         with col3_2:
             st.info("**Presión**\n> Caída de 4 hPa/h crítico")
@@ -67,6 +72,7 @@ def main():
     with col4:
         col4_1, col4_2 = st.columns([1, 4])
         with col4_1:
+            from components.svg_icons_simple import show_svg_icon
             show_svg_icon("cloud", width=20, height=20, animation="pulse", color="#6B7280")
         with col4_2:
             st.info("**Nubosidad**\n> 70% crítico\nCumulonimbus")
@@ -77,6 +83,7 @@ def main():
     # Diagrama compacto en una sola fila
     col1, col2 = st.columns([1, 20])
     with col1:
+        from components.svg_icons_simple import show_svg_icon
         show_svg_icon("refresh", width=24, height=24, animation="rotate", color="#3B82F6")
     with col2:
         st.markdown("### Flujo de Procesamiento")
@@ -122,6 +129,7 @@ def main():
         # Fuentes de Datos
         col1_1, col1_2 = st.columns([1, 20])
         with col1_1:
+            from components.svg_icons_simple import show_svg_icon
             show_svg_icon(
                 "bar-chart-3",
                 width=20,
@@ -141,6 +149,7 @@ def main():
         # Parámetros Monitoreados
         col1_3, col1_4 = st.columns([1, 20])
         with col1_3:
+            from components.svg_icons_simple import show_svg_icon
             show_svg_icon("thermometer", width=20, height=20, animation="pulse", color="#EF4444")
         with col1_4:
             st.markdown("**Parámetros Monitoreados:**")
@@ -158,6 +167,7 @@ def main():
         # Algoritmos Utilizados
         col2_1, col2_2 = st.columns([1, 20])
         with col2_1:
+            from components.svg_icons_simple import show_svg_icon
             show_svg_icon("brain", width=20, height=20, animation="pulse", color="#8B5CF6")
         with col2_2:
             st.markdown("**Algoritmos Utilizados:**")
@@ -172,6 +182,7 @@ def main():
         # Precisión del Sistema
         col2_3, col2_4 = st.columns([1, 20])
         with col2_3:
+            from components.svg_icons_simple import show_svg_icon
             show_svg_icon("gauge", width=20, height=20, animation="gentlePulse", color="#10B981")
         with col2_4:
             st.markdown("**Precisión del Sistema:**")
@@ -187,6 +198,7 @@ def main():
         # Modelos Globales
         col3_1, col3_2 = st.columns([1, 20])
         with col3_1:
+            from components.svg_icons_simple import show_svg_icon
             show_svg_icon("compass", width=20, height=20, animation="rotate", color="#3B82F6")
         with col3_2:
             st.markdown("**Modelos Globales:**")
@@ -201,6 +213,7 @@ def main():
         # Modelos Regionales
         col3_3, col3_4 = st.columns([1, 20])
         with col3_3:
+            from components.svg_icons_simple import show_svg_icon
             show_svg_icon("map", width=20, height=20, animation="pulse", color="#10B981")
         with col3_4:
             st.markdown("**Modelos Regionales:**")
@@ -216,6 +229,7 @@ def main():
         # Estándares Implementados
         col4_1, col4_2 = st.columns([1, 20])
         with col4_1:
+            from components.svg_icons_simple import show_svg_icon
             show_svg_icon("check-circle", width=20, height=20, animation="pulse", color="#10B981")
         with col4_2:
             st.markdown("**Estándares Implementados:**")
@@ -230,6 +244,7 @@ def main():
         # Validación del Sistema
         col4_3, col4_4 = st.columns([1, 20])
         with col4_3:
+            from components.svg_icons_simple import show_svg_icon
             show_svg_icon("search", width=20, height=20, animation="gentlePulse", color="#3B82F6")
         with col4_4:
             st.markdown("**Validación del Sistema:**")
@@ -246,6 +261,7 @@ def main():
     # Contacto y Soporte
     col1, col2 = st.columns([1, 20])
     with col1:
+        from components.svg_icons_simple import show_svg_icon
         show_svg_icon("mail", width=32, height=32, animation="bounce", color="#3B82F6")
     with col2:
         st.header("Contacto")
