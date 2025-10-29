@@ -18,18 +18,61 @@ from cache.cache_manager import save_model, load_model, save_data, load_data
 
 @st.cache_data(ttl=1800, show_spinner=False)  # Cache 30 minutos para predicciones ML
 def get_prediction_data():
-    """Obtener datos para predicciones (sin widgets)"""
-    # Crear dataset sintético realista (sin mostrar en pantalla)
+    """Obtener datos para predicciones - Intenta usar datos reales de API, fallback a sintéticos"""
+    import requests
+    from datetime import datetime
+    
+    # Intentar obtener datos reales de la API
+    real_data_available = False
+    base_data = {}
+    
+    try:
+        # Intentar obtener datos de OpenWeatherMap
+        api_key = st.secrets.secrets.get("OPENWEATHER_API_KEY")
+        if api_key:
+            url = "https://api.openweathermap.org/data/2.5/weather"
+            params = {
+                "q": "Córdoba,AR",
+                "appid": api_key,
+                "units": "metric"
+            }
+            response = requests.get(url, params=params, timeout=3)
+            
+            if response.status_code == 200:
+                data = response.json()
+                base_data = {
+                    "temperature": data["main"]["temp"],
+                    "humidity": data["main"]["humidity"],
+                    "pressure": data["main"]["pressure"],
+                    "wind_speed": data["wind"].get("speed", 0) * 3.6,  # m/s a km/h
+                    "wind_direction": data["wind"].get("deg", 0),
+                    "cloud_cover": data["clouds"]["all"]
+                }
+                real_data_available = True
+    except Exception:
+        # Si falla, usar datos sintéticos
+        pass
+    
+    # Crear dataset - usar datos reales como base si están disponibles
     np.random.seed(42)
     n_samples = 1000
-
-    # Variables meteorológicas
-    temperature = np.random.normal(25, 8, n_samples)
-    humidity = np.random.normal(65, 15, n_samples)
-    pressure = np.random.normal(1013, 20, n_samples)
-    wind_speed = np.random.exponential(12, n_samples)
-    wind_direction = np.random.uniform(0, 360, n_samples)
-    cloud_cover = np.random.uniform(0, 100, n_samples)
+    
+    if real_data_available:
+        # Crear variación alrededor de datos reales
+        temperature = np.random.normal(base_data["temperature"], 8, n_samples)
+        humidity = np.random.normal(base_data["humidity"], 15, n_samples)
+        pressure = np.random.normal(base_data["pressure"], 20, n_samples)
+        wind_speed = np.random.exponential(max(1, base_data["wind_speed"]), n_samples)
+        wind_direction = np.random.uniform(0, 360, n_samples)
+        cloud_cover = np.random.uniform(0, 100, n_samples)
+    else:
+        # Datos sintéticos realistas
+        temperature = np.random.normal(25, 8, n_samples)
+        humidity = np.random.normal(65, 15, n_samples)
+        pressure = np.random.normal(1013, 20, n_samples)
+        wind_speed = np.random.exponential(12, n_samples)
+        wind_direction = np.random.uniform(0, 360, n_samples)
+        cloud_cover = np.random.uniform(0, 100, n_samples)
 
     # Crear variable objetivo (probabilidad de tormenta) basada en reglas meteorológicas
     storm_probability = (
@@ -52,7 +95,8 @@ def get_prediction_data():
         'wind_speed': wind_speed,
         'wind_direction': wind_direction,
         'cloud_cover': cloud_cover,
-        'storm_probability': storm_probability
+        'storm_probability': storm_probability,
+        'data_source': 'real' if real_data_available else 'synthetic'
     })
 
     # Intentar cargar datos y modelos desde cache

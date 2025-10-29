@@ -342,6 +342,26 @@ Este proyecto está bajo la Licencia MIT. Ver [LICENSE](LICENSE) para más detal
 - **Datos Sensibles**: No se incluyen archivos de cache ni datos sensibles en el repositorio
 - **Autenticación**: Configura ADMIN_PASSWORD y GUEST_PASSWORD en variables de entorno
 
+## 🤖 **Estrategia de Entrenamiento ML**
+
+El sistema tiene múltiples opciones para entrenar modelos ML sin exceder límites de GitHub Actions:
+
+1. **✅ Entrenamiento Automático en Streamlit Cloud** (Recomendado)
+   - Se ejecuta automáticamente cuando el cache expira (7 días)
+   - **Gratis** - No consume minutos de GitHub Actions
+   - Sin configuración adicional necesaria
+
+2. **🔄 Entrenamiento Local + Push Manual** (Opcional)
+   - Control total sobre cuándo entrenar
+   - Útil para versionar modelos en el repo
+
+3. **⏰ GitHub Actions Semanal** (Opcional, conservador)
+   - Solo ~20-40 minutos/mes (< 2% del límite gratuito)
+   - Se ejecuta automáticamente cada domingo a las 2:00 AM UTC
+   - Puede desactivarse desde GitHub Actions
+
+**📖 Para más detalles, ver:** [`ML_TRAINING_STRATEGY.md`](ML_TRAINING_STRATEGY.md)
+
 ## 🔒 **Seguridad y Logging**
 
 ### **Sistema de Autenticación**
