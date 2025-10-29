@@ -145,6 +145,8 @@ security_analysis/*.json
 security_analysis/*.txt
 
 # IDE
+.cursor/
+*.md 
 .vscode/
 .idea/
 *.swp
